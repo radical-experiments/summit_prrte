@@ -173,6 +173,7 @@ if __name__ == '__main__':
         # count the number of tasks
         ntasks = sum([len(i) for i in tasks_node])
         reporter.header("submit %d units" % ntasks)
+        print(tasks_node)
 
         # report we are starting to create the RP tasks
         reporter.progress_tgt(ntasks, label='create')
@@ -200,6 +201,8 @@ if __name__ == '__main__':
                 cuds.append(cud)
 
         reporter.progress_done()
+
+        print(cuds)
 
         # submit tasks
         umgr.submit_units(cuds)
