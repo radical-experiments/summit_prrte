@@ -1,0 +1,17 @@
+#time,event,comp,thread,uid,state,msg
+1593474363.3269303,sync_abs,pmgr_launching.0000,MainThread,,,login3.summit.olcf.ornl.gov:10.134.0.33:1593474363.3248703:1593474363.3396313:ntp
+1593474363.3282535,comp_start,pmgr_launching.0000,MainThread,pmgr_launching.0000,,
+#time,event,comp,thread,uid,state,msg
+1593474363.7756357,sync_abs,pmgr_launching.0000,MainThread,,,login3.summit.olcf.ornl.gov:10.134.0.33:1593474363.7742555:1593474363.7890165:ntp
+1593474363.7756779,init1,pmgr_launching.0000,MainThread,pmgr_launching.0000,,/autofs/nccs-svm1_home1/mturilli1/experiments/summit_prrte/bin/rp.session.login3.mturilli1.018442.0012
+1593474363.8539016,component_init,pmgr_launching.0000,Thread-1,,,
+1593474372.6502526,get,pmgr_launching.0000,Thread-1,pilot.0000,PMGR_LAUNCHING_PENDING,
+1593474372.6505773,advance,pmgr_launching.0000,Thread-1,pilot.0000,PMGR_LAUNCHING,
+1593474373.0214264,staging_in_start,pmgr_launching.0000,Thread-1,pilot.0000,,
+1593474375.9910307,staging_in_stop,pmgr_launching.0000,Thread-1,pilot.0000,,
+1593474375.9910583,submission_start,pmgr_launching.0000,Thread-1,pilot.0000,,
+1593474377.4888277,submission_stop,pmgr_launching.0000,Thread-1,pilot.0000,,
+1593474377.4888804,advance,pmgr_launching.0000,Thread-1,pilot.0000,PMGR_ACTIVE_PENDING,
+1593474744.5830443,advance,pmgr_launching.0000,Thread-4,pilot.0000,CANCELED,
+1593474746.6213171,component_final,pmgr_launching.0000,Thread-4,,,
+1593474746.6213360,END,pmgr_launching.0000,Thread-4,,,

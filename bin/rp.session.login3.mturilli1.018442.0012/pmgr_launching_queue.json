@@ -1,0 +1,17 @@
+{
+    "bulk_size": 0,
+    "channel": "pmgr_launching_queue",
+    "cmgr": "cmgr.0001",
+    "heartbeat": {
+        "addr_pub": "tcp://10.134.0.33:39623",
+        "addr_sub": "tcp://10.134.0.33:43699",
+        "interval": 1.0,
+        "timeout": 60.0
+    },
+    "kind": "queue",
+    "log_level": "error",
+    "path": "/autofs/nccs-svm1_home1/mturilli1/experiments/summit_prrte/bin/rp.session.login3.mturilli1.018442.0012",
+    "sid": "rp.session.login3.mturilli1.018442.0012",
+    "stall_hwm": 0,
+    "uid": "pmgr_launching_queue"
+}

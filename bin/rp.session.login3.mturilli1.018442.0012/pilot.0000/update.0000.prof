@@ -1,0 +1,19 @@
+#time,event,comp,thread,uid,state,msg
+1593474538.5866354,sync_abs,update.0000,MainThread,,,batch4.summit.olcf.ornl.gov:10.134.0.44:1593474538.5862586:1593474538.5889676:ntp
+1593474538.5882037,comp_start,update.0000,MainThread,update.0000,,
+#time,event,comp,thread,uid,state,msg
+1593474538.7329586,sync_abs,update.0000,MainThread,,,batch4.summit.olcf.ornl.gov:10.134.0.44:1593474538.7328327:1593474538.7355416:ntp
+1593474538.7330239,init1,update.0000,MainThread,update.0000,,/gpfs/alpine/csc343/scratch/mturilli1/radical.pilot.sandbox/rp.session.login3.mturilli1.018442.0012/pilot.0000
+1593474539.0469823,component_init,update.0000,Thread-1,,,
+1593474540.2564077,update_pushed,update.0000,Thread-3,,,bulk size: 1
+1593474542.1418860,update_pushed,update.0000,Thread-4,,,bulk size: 43
+1593474546.4132137,update_pushed,update.0000,Thread-3,,,bulk size: 1
+1593474548.1893041,update_pushed,update.0000,Thread-4,,,bulk size: 9
+1593474549.2297285,update_pushed,update.0000,Thread-4,,,bulk size: 9
+1593474550.2714422,update_pushed,update.0000,Thread-4,,,bulk size: 3
+1593474551.3105135,update_pushed,update.0000,Thread-4,,,bulk size: 6
+1593474552.3483553,update_pushed,update.0000,Thread-4,,,bulk size: 3
+1593474556.8331053,update_pushed,update.0000,Thread-3,,,bulk size: 1
+1593474558.3916070,update_pushed,update.0000,Thread-4,,,bulk size: 2
+1593474560.8441820,component_final,update.0000,Thread-2,,,
+1593474560.8442216,END,update.0000,Thread-2,,,

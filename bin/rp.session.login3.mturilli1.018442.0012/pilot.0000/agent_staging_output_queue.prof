@@ -1,0 +1,5 @@
+#time,event,comp,thread,uid,state,msg
+1593474532.2470925,sync_abs,agent_staging_output_queue,MainThread,,,batch4.summit.olcf.ornl.gov:10.134.0.44:1593474532.246753:1593474532.249462:ntp
+1593474532.2508035,bridge_start,agent_staging_output_queue,MainThread,agent_staging_output_queue,,
+#time,event,comp,thread,uid,state,msg
+1593474532.2523222,sync_abs,agent_staging_output_queue,MainThread,,,batch4.summit.olcf.ornl.gov:10.134.0.44:1593474532.252212:1593474532.254921:ntp

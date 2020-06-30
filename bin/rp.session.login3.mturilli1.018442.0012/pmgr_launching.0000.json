@@ -1,0 +1,18 @@
+{
+    "base": "/autofs/nccs-svm1_home1/mturilli1/experiments/summit_prrte/bin",
+    "cmgr": "cmgr.0001",
+    "count": 1,
+    "db_poll_sleeptime": 10.0,
+    "dburl": "mongodb://mturilli:FUQXr5WbKhbEDypQ@129.114.17.185:27017/rct",
+    "heartbeat": {
+        "addr_pub": "tcp://10.134.0.33:39623",
+        "addr_sub": "tcp://10.134.0.33:43699",
+        "interval": 1.0,
+        "timeout": 60.0
+    },
+    "kind": "pmgr_launching",
+    "owner": "pmgr.0000",
+    "path": "/autofs/nccs-svm1_home1/mturilli1/experiments/summit_prrte/bin/rp.session.login3.mturilli1.018442.0012",
+    "sid": "rp.session.login3.mturilli1.018442.0012",
+    "uid": "pmgr_launching.0000"
+}

@@ -1,0 +1,22 @@
+{
+    "base": "/autofs/nccs-svm1_home1/mturilli1/experiments/summit_prrte/bin",
+    "bulk_size": 1024,
+    "bulk_time": 1.0,
+    "client_sandbox": "/autofs/nccs-svm1_home1/mturilli1/experiments/summit_prrte/bin",
+    "cmgr": "cmgr.0000",
+    "count": 1,
+    "dburl": "mongodb://mturilli:FUQXr5WbKhbEDypQ@129.114.17.185:27017/rct",
+    "default_dburl": "mongodb://rct:rct_test@two.radical-project.org/rct_test",
+    "heartbeat": {
+        "addr_pub": "tcp://10.134.0.33:43259",
+        "addr_sub": "tcp://10.134.0.33:43731",
+        "interval": 1.0,
+        "timeout": 60.0
+    },
+    "kind": "update",
+    "path": "/autofs/nccs-svm1_home1/mturilli1/experiments/summit_prrte/bin/rp.session.login3.mturilli1.018442.0012",
+    "record": null,
+    "session_base": "/ccs/home/mturilli1/experiments/summit_prrte/bin",
+    "sid": "rp.session.login3.mturilli1.018442.0012",
+    "uid": "update.0000"
+}

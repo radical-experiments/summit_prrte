@@ -1,0 +1,8 @@
+#time,event,comp,thread,uid,state,msg
+1593474364.3084896,sync_abs,cmgr.0002,MainThread,,,login3.summit.olcf.ornl.gov:10.134.0.33:1593474364.306825:1593474364.321586:ntp
+1593474364.3098240,init2,cmgr.0002,MainThread,cmgr.0002,,/autofs/nccs-svm1_home1/mturilli1/experiments/summit_prrte/bin/rp.session.login3.mturilli1.018442.0012
+1593474364.3682101,start_bridges_start,cmgr.0002,MainThread,cmgr.0002,,
+1593474368.2798338,start_bridges_stop,cmgr.0002,MainThread,cmgr.0002,,
+1593474368.2801096,start_components_start,cmgr.0002,MainThread,cmgr.0002,,
+1593474372.0980871,start_components_stop,cmgr.0002,MainThread,cmgr.0002,,
+1593474559.2864094,close,cmgr.0002,MainThread,cmgr.0002,,

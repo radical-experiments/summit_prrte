@@ -1,0 +1,23 @@
+#time,event,comp,thread,uid,state,msg
+1593474358.9033270,sync_abs,update.0000,MainThread,,,login3.summit.olcf.ornl.gov:10.134.0.33:1593474358.9018507:1593474358.9166117:ntp
+1593474358.9049101,comp_start,update.0000,MainThread,update.0000,,
+#time,event,comp,thread,uid,state,msg
+1593474359.3562305,sync_abs,update.0000,MainThread,,,login3.summit.olcf.ornl.gov:10.134.0.33:1593474359.3551822:1593474359.3699431:ntp
+1593474359.3562720,init1,update.0000,MainThread,update.0000,,/autofs/nccs-svm1_home1/mturilli1/experiments/summit_prrte/bin/rp.session.login3.mturilli1.018442.0012
+1593474359.7424924,component_init,update.0000,Thread-1,,,
+1593474372.6414089,update_pushed,update.0000,Thread-3,,,bulk size: 1
+1593474373.7882469,update_pushed,update.0000,Thread-3,,,bulk size: 34
+1593474374.8318682,update_pushed,update.0000,Thread-4,,,bulk size: 22
+1593474377.5268247,update_pushed,update.0000,Thread-3,,,bulk size: 1
+1593474544.8523629,update_pushed,update.0000,Thread-3,,,bulk size: 1
+1593474548.5673287,update_pushed,update.0000,Thread-3,,,bulk size: 3
+1593474549.6800911,update_pushed,update.0000,Thread-3,,,bulk size: 6
+1593474550.7875533,update_pushed,update.0000,Thread-3,,,bulk size: 4
+1593474551.8946683,update_pushed,update.0000,Thread-3,,,bulk size: 3
+1593474553.0035989,update_pushed,update.0000,Thread-3,,,bulk size: 3
+1593474554.0884531,update_pushed,update.0000,Thread-4,,,bulk size: 1
+1593474559.2964790,update_pushed,update.0000,Thread-3,,,bulk size: 1
+1593474561.1328993,update_pushed,update.0000,Thread-4,,,bulk size: 1
+1593474564.9495630,update_pushed,update.0000,Thread-3,,,bulk size: 1
+1593474625.2031572,component_final,update.0000,Thread-5,,,
+1593474625.2034574,END,update.0000,Thread-5,,,
