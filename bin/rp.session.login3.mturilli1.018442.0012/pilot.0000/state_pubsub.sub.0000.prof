@@ -1,2 +1,0 @@
-#time,event,comp,thread,uid,state,msg
-1593474539.0457168,sync_abs,state_pubsub.sub.0000,Thread-1,,,batch4.summit.olcf.ornl.gov:10.134.0.44:1593474539.0451984:1593474539.0479074:ntp

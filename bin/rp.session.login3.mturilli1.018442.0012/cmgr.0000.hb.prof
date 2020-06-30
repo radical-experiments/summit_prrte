@@ -1,2 +1,0 @@
-#time,event,comp,thread,uid,state,msg
-1593474354.4780993,sync_abs,cmgr.0000.hb,MainThread,,,login3.summit.olcf.ornl.gov:10.134.0.33:1593474354.4765353:1593474354.4912963:ntp

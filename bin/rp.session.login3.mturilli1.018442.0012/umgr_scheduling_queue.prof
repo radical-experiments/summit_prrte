@@ -1,5 +1,0 @@
-#time,event,comp,thread,uid,state,msg
-1593474365.4887080,sync_abs,umgr_scheduling_queue,MainThread,,,login3.summit.olcf.ornl.gov:10.134.0.33:1593474365.487028:1593474365.5017889:ntp
-1593474365.4924886,bridge_start,umgr_scheduling_queue,MainThread,umgr_scheduling_queue,,
-#time,event,comp,thread,uid,state,msg
-1593474365.4973929,sync_abs,umgr_scheduling_queue,MainThread,,,login3.summit.olcf.ornl.gov:10.134.0.33:1593474365.495174:1593474365.509935:ntp

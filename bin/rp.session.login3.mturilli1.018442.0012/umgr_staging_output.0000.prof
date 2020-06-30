@@ -1,9 +1,0 @@
-#time,event,comp,thread,uid,state,msg
-1593474370.6219056,sync_abs,umgr_staging_output.0000,MainThread,,,login3.summit.olcf.ornl.gov:10.134.0.33:1593474370.6209629:1593474370.6357238:ntp
-1593474370.6231728,comp_start,umgr_staging_output.0000,MainThread,umgr_staging_output.0000,,
-#time,event,comp,thread,uid,state,msg
-1593474370.9416502,sync_abs,umgr_staging_output.0000,MainThread,,,login3.summit.olcf.ornl.gov:10.134.0.33:1593474370.940599:1593474370.95536:ntp
-1593474370.9417226,init1,umgr_staging_output.0000,MainThread,umgr_staging_output.0000,,/autofs/nccs-svm1_home1/mturilli1/experiments/summit_prrte/bin/rp.session.login3.mturilli1.018442.0012
-1593474370.9526274,component_init,umgr_staging_output.0000,Thread-1,,,
-1593474619.5263958,component_final,umgr_staging_output.0000,Thread-3,,,
-1593474619.5267267,END,umgr_staging_output.0000,Thread-3,,,
