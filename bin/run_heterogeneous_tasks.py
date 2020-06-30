@@ -145,8 +145,8 @@ if __name__ == '__main__':
                    'exit_on_error' : True,
                    'project'       : 'csc343',
                    'queue'         : queue,
-                   'cores'         : 168,
-                   'gpus'          : 6
+                   'cores'         : nodes * 168,
+                   'gpus'          : nodes * 6
                   }
         pdesc = rp.ComputePilotDescription(pd_init)
         
