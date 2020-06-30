@@ -8,6 +8,8 @@ import radical.utils as ru
 
 from random import randint
 
+
+# -----------------------------------------------------------------------------
 def unique_sums_cpu(numbers, target, partial=[], sums=[]):
 
     s = sum(partial)
@@ -28,6 +30,8 @@ def unique_sums_cpu(numbers, target, partial=[], sums=[]):
     # nothing else to do
     return sums
 
+
+# -----------------------------------------------------------------------------
 def unique_sums_gpu(numbers, target, partial=[], sums=[]):
 
     s = sum(partial)
@@ -49,7 +53,7 @@ def unique_sums_gpu(numbers, target, partial=[], sums=[]):
     return sums
 
 
-
+# -----------------------------------------------------------------------------
 def fill_node_cpu(nnodes, ncores):
 
     cores=[]
@@ -65,6 +69,7 @@ def fill_node_cpu(nnodes, ncores):
     return cores
 
 
+# -----------------------------------------------------------------------------
 def fill_node_gpu(nnodes, ncores):
 
     cores=[]
@@ -80,6 +85,7 @@ def fill_node_gpu(nnodes, ncores):
     return cores
 
 
+# -----------------------------------------------------------------------------
 def merge_gpus_cpus(gpus, cpus):
 
     lg = len(gpus)
@@ -95,6 +101,7 @@ def merge_gpus_cpus(gpus, cpus):
     return tasks_node
 
 
+# -----------------------------------------------------------------------------
 def sanity_check(tn, n, gn, cn):
 
     if len(tn) != n:
@@ -108,7 +115,8 @@ def sanity_check(tn, n, gn, cn):
 
     return "pass"
 
-# ------------------------------------------------------------------------------
+
+# =============================================================================
 if __name__ == '__main__':
 
     # reporter
@@ -116,10 +124,12 @@ if __name__ == '__main__':
     reporter.title('Getting Started (RP version %s)' % rp.version)
 
     # resource specified as argument
-    if len(sys.argv) == 2: 
+    if len(sys.argv) == 4: 
         resource = sys.argv[1]
+        nodes = int(sys.argv[2])
+        queue = sys.argv[3]
     else: 
-        reporter.exit('Usage:\t%s [resource]\n\n' % sys.argv[0])
+        reporter.exit('Usage:\t%s [resource] [number_of_nodes] [queue]\n\n' % sys.argv[0])
 
     # Create a session.
     session = rp.Session()
@@ -134,7 +144,7 @@ if __name__ == '__main__':
                    'runtime'       : 60,
                    'exit_on_error' : True,
                    'project'       : 'csc343',
-                   'queue'         : 'debug',
+                   'queue'         : queue,
                    'cores'         : 168,
                    'gpus'          : 6
                   }
@@ -143,12 +153,10 @@ if __name__ == '__main__':
         pilot = pmgr.submit_pilots(pdesc)
         umgr.add_pilots(pilot)
 
-        # how many nodes we want
-        nodes = 1 #23
-
-        # how many GPUs and CPU cores per node. We researve always at least one
+        # how many GPUs and CPU cores per node. We researve always at least 
+        # one for the GPU
         gpus_node = pd_init['gpus']
-        cores_node = int(pd_init['cores']/4)
+        cores_node = int(pd_init['cores'] / 4) - 1
 
         # n distinct combinations of task sizes to occpy a node
         # FIXME: concot a function that does not retain memory after its
