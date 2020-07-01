@@ -199,6 +199,8 @@ if __name__ == '__main__':
                 cud.arguments  = [randint(300, 900) * 1]
                 cud.gpu_processes = pgpu
                 cud.gpu_process_type = rp.POSIX
+                cud.cpu_processes = 1
+                cud.cpu_threads = 4
                 cuds.append(cud)
 
             for pcpu in tasks[1]:
