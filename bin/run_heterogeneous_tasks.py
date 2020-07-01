@@ -98,7 +98,18 @@ def merge_gpus_cpus(gpus, cpus):
     else:
         raise Exception("GPUs/CPUs per node mismatch:\n%i != %i" % (lg, lc))
 
-    return tasks_node
+    # Account for the cores needed for each GPU task.
+    tasks_node_norm = []
+    for tasks in tasks_node:
+        ncores_gpus = len(tasks[0])
+        if any(i > ncores_gpus for i in tasks[1]):
+            tasks[1].sort()
+            new_cpus_tasks = [tasks[1][-1]-ncores_gpus if item == tasks[1][-1] else item for item in tasks[1]]
+        else:
+            raise Exception("ERROR: implement sum within tasks[1]")
+        tasks_node_norm.append([tasks[0], new_cpus_tasks])
+
+    return tasks_node_norm
 
 
 # -----------------------------------------------------------------------------
@@ -156,7 +167,7 @@ if __name__ == '__main__':
         # how many GPUs and CPU cores per node. We researve always at least 
         # one for the GPU
         gpus_node = 6
-        cores_node = 41
+        cores_node = 42
 
         # n distinct combinations of task sizes to occpy a node
         # FIXME: concot a function that does not retain memory after its
@@ -171,9 +182,9 @@ if __name__ == '__main__':
             raise Exception(report)
 
         # count the number of tasks
-        ntasks = sum([len(i) for i in tasks_node])
+        ntasks = sum([len(j) for i in tasks_node for j in i])
         reporter.header("submit %d units" % ntasks)
-        print(tasks_node)
+        print("DEBUG: gpu/cpu processes peer node: %s" % tasks_node)
 
         # report we are starting to create the RP tasks
         reporter.progress_tgt(ntasks, label='create')
@@ -201,8 +212,6 @@ if __name__ == '__main__':
                 cuds.append(cud)
 
         reporter.progress_done()
-
-        print(cuds)
 
         # submit tasks
         umgr.submit_units(cuds)
