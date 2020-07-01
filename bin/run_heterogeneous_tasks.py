@@ -135,12 +135,13 @@ if __name__ == '__main__':
     reporter.title('Getting Started (RP version %s)' % rp.version)
 
     # resource specified as argument
-    if len(sys.argv) == 4: 
+    if len(sys.argv) == 5: 
         resource = sys.argv[1]
         nodes = int(sys.argv[2])
         queue = sys.argv[3]
+        gens = int(sys.argv[4])
     else: 
-        reporter.exit('Usage:\t%s [resource] [number_of_nodes] [queue]\n\n' % sys.argv[0])
+        reporter.exit('Usage:\t%s [resource] [number_of_nodes] [queue] [generations]\n\n' % sys.argv[0])
 
     # Create a session.
     session = rp.Session()
@@ -180,6 +181,9 @@ if __name__ == '__main__':
         report = sanity_check(tasks_node, nodes, gpus_node, cores_node)
         if report != "pass":
             raise Exception(report)
+
+        # Add task generation
+        tasks_node = tasks_node * gens
 
         # count the number of tasks
         ntasks = sum([len(j) for i in tasks_node for j in i])
