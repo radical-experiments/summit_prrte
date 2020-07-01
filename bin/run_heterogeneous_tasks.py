@@ -155,8 +155,8 @@ if __name__ == '__main__':
 
         # how many GPUs and CPU cores per node. We researve always at least 
         # one for the GPU
-        gpus_node = pd_init['gpus']
-        cores_node = int(pd_init['cores'] / 4) - 1
+        gpus_node = 6
+        cores_node = 41
 
         # n distinct combinations of task sizes to occpy a node
         # FIXME: concot a function that does not retain memory after its
