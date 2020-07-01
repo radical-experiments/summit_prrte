@@ -185,7 +185,7 @@ if __name__ == '__main__':
 
                 cud = rp.ComputeUnitDescription()
                 cud.executable = '/ccs/home/mturilli1/bin/hello_rp.sh'
-                cud.arguments  = [randint(5, 10) * 1]
+                cud.arguments  = [randint(300, 900) * 1]
                 cud.gpu_processes = pgpu
                 cud.gpu_process_type = rp.POSIX
                 cuds.append(cud)
@@ -194,7 +194,7 @@ if __name__ == '__main__':
 
                 cud = rp.ComputeUnitDescription()
                 cud.executable = '/ccs/home/mturilli1/bin/hello_rp.sh'
-                cud.arguments  = [randint(5, 10) * 1]
+                cud.arguments  = [randint(300, 900) * 1]
                 cud.cpu_processes = pcpu
                 cud.cpu_threads = 4
                 cud.cpu_process_type = rp.POSIX
