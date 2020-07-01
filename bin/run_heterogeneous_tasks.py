@@ -121,7 +121,7 @@ def sanity_check(tn, n, gn, cn):
     for t in tn:
         if sum(t[0]) != gn:
             return "GPU per node mismatch"
-        if sum(t[1]) != cn:
+        if sum(t[1]) != (cn - len(t[0])):
             return "CPU cores per node mismatch"
 
     return "pass"
