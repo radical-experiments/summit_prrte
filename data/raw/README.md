@@ -29,3 +29,4 @@ git push
 | rp.session.login4.mturilli1.018444.0001 | 128 | 1116 | prrte | wrong concurrency |
 | rp.session.login4.mturilli1.018444.0003 | 4 | 42 | passed | prrte |
 | rp.session.login4.mturilli1.018444.0004 | 4 | 126 | passed | prrte |
+| rp.session.login4.mturilli1.018444.0005 | 4 | 126 | hotfix/prrte events | prrte |
