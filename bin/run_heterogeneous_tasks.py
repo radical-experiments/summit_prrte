@@ -135,13 +135,14 @@ if __name__ == '__main__':
     reporter.title('Getting Started (RP version %s)' % rp.version)
 
     # resource specified as argument
-    if len(sys.argv) == 5: 
+    if len(sys.argv) == 6: 
         resource = sys.argv[1]
         nodes = int(sys.argv[2])
         queue = sys.argv[3]
         gens = int(sys.argv[4])
+        subagents = int(sys.argv[5])
     else: 
-        reporter.exit('Usage:\t%s [resource] [number_of_nodes] [queue] [generations]\n\n' % sys.argv[0])
+        reporter.exit('Usage:\t%s [resource] [number_of_nodes] [queue] [generations] [number of sub-agents]\n\n' % sys.argv[0])
 
     # Create a session.
     session = rp.Session()
@@ -153,7 +154,7 @@ if __name__ == '__main__':
         umgr   = rp.UnitManager(session=session)
         
         pd_init = {'resource'      : resource,
-                   'runtime'       : 60,
+                   'runtime'       : 120,
                    'exit_on_error' : True,
                    'project'       : 'csc343',
                    'queue'         : queue,
@@ -170,15 +171,18 @@ if __name__ == '__main__':
         gpus_node = 6
         cores_node = 42
 
+        # each subagent requires a node. No workload runs on subagent nodes
+        wrkl_nodes = nodes - subagents
+
         # n distinct combinations of task sizes to occpy a node
         # FIXME: concot a function that does not retain memory after its
         # execution.
-        tasks_gpu = fill_node_gpu(nodes, gpus_node)
-        tasks_cpu = fill_node_cpu(nodes, cores_node)
+        tasks_gpu = fill_node_gpu(wrkl_nodes, gpus_node)
+        tasks_cpu = fill_node_cpu(wrkl_nodes, cores_node)
         tasks_node = merge_gpus_cpus(tasks_gpu, tasks_cpu)
 
         # we use an heuristic: sanity check
-        report = sanity_check(tasks_node, nodes, gpus_node, cores_node)
+        report = sanity_check(tasks_node, wrkl_nodes, gpus_node, cores_node)
         if report != "pass":
             raise Exception(report)
 
@@ -200,7 +204,7 @@ if __name__ == '__main__':
 
                 cud = rp.ComputeUnitDescription()
                 cud.executable = '/ccs/home/mturilli1/bin/hello_rp.sh'
-                cud.arguments  = [randint(300, 900) * 1]
+                cud.arguments  = [randint(60, 300) * 1]
                 cud.gpu_processes = pgpu
                 cud.gpu_process_type = rp.POSIX
                 cud.cpu_processes = 1
