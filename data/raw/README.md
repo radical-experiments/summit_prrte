@@ -30,3 +30,10 @@ git push
 | rp.session.login4.mturilli1.018444.0003 | 4 | 42 | passed | prrte |
 | rp.session.login4.mturilli1.018444.0004 | 4 | 126 | passed | prrte |
 | rp.session.login4.mturilli1.018444.0005 | 4 | 126 | hotfix/prrte events | prrte |
+
+
+## Experiment
+
+| SID | \#nodes | \#tasks | executor | notes |
+|-----|---------|---------|----------|-------|
+| rp.session.login2.mturilli1.018474.0000 | 128 | TBD | prrte 1 | passed |
