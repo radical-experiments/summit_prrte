@@ -34,6 +34,7 @@ git push
 
 ## Experiment
 
-| SID | \#nodes | \#tasks | executor | notes |
+| SID | \#nodes | \#tasks | \#generations | executor | notes |
 |-----|---------|---------|----------|-------|
-| rp.session.login2.mturilli1.018474.0000 | 128 | TBD | prrte 1 | passed |
+| rp.session.login2.mturilli1.018474.0000 | 128 | TBD | 1 | prrte 1 | passed |
+| rp.session.login2.mturilli1.018488.0001 | 128 | TBD | 1 | prrte master | passed |
