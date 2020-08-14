@@ -36,5 +36,5 @@ git push
 
 | SID | \#nodes | \#tasks | \#generations | executor | notes |
 |-----|---------|---------|----------|-------|
-| rp.session.login2.mturilli1.018474.0000 | 128 | TBD | 1 | prrte 1 | passed |
-| rp.session.login2.mturilli1.018488.0001 | 128 | TBD | 1 | prrte master | passed |
+| rp.session.login2.mturilli1.018474.0000 | 128 | 1126 | 1 | prrte 1 | RP 1.4 |
+| rp.session.login2.mturilli1.018488.0001 | 128 | 1126 | 1 | prrte master | RP 1.4 |
