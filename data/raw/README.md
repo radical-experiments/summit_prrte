@@ -38,3 +38,4 @@ git push
 |-----|---------|---------|----------|-------|
 | rp.session.login2.mturilli1.018474.0000 | 128 | TBD | 1 | prrte 1 | passed |
 | rp.session.login2.mturilli1.018488.0001 | 128 | TBD | 1 | prrte master | passed |
+| rp.session.login2.mturilli1.018488.0004 | 128 | TBD | 1126 | prrte master | rp 1.5 |
